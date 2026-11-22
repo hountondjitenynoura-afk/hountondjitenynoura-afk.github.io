@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de HOUNTONDJI Teny Noura Tifenn Assouanmagni, étudiante en génie biomédical à l'IIT : innovation en santé et technologies médicales.">
+  <title>HOUNTONDJI Teny Noura Tifenn Assouanmagni — Portfolio biomédical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nuit: '#0B1F2A',
+            petrole: '#133445',
+            glace: '#E8F4F2',
+            turquoise: '#2EC4B6',
+            bleu: '#3A86FF',
+            vert: '#7BD389'
+          },
+          fontFamily: {
+            titre: ['Sora', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-nuit text-glace font-sans antialiased overflow-x-hidden">
+
+  <!-- En-tête : logo + navigation -->
+  <header class="sticky top-0 z-50 bg-nuit/95 backdrop-blur border-b border-petrole">
+    <div class="mx-auto max-w-5xl px-5 h-16 flex items-center justify-between">
+      <a href="#accueil" class="font-titre text-xl font-bold">HOUNTONDJI<span class="text-turquoise">.</span></a>
+
+      <nav aria-label="Navigation principale">
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <ul id="menu" class="hidden md:flex gap-6 text-sm font-medium absolute md:static left-0 right-0 top-16 bg-nuit md:bg-transparent border-b md:border-0 border-petrole flex-col md:flex-row p-5 md:p-0">
+          <li><a class="nav-link hover:text-turquoise" href="#accueil">Accueil</a></li>
+          <li><a class="nav-link hover:text-turquoise" href="#domaines">Domaines</a></li>
+          <li><a class="nav-link hover:text-turquoise" href="#projets">Projets</a></li>
+          <li><a class="nav-link hover:text-turquoise" href="#cv">CV</a></li>
+          <li><a class="nav-link hover:text-turquoise" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil : photo en cercle en haut à gauche, nom en grand au centre -->
+    <section id="accueil" class="relative mx-auto max-w-5xl px-5 pt-10 pb-20 md:pt-14 md:pb-28 text-center">
+      <img src="photo.png" alt="Photo de Teny Noura Tifenn Assouanmagni HOUNTONDJI en blouse blanche" width="112" height="112"
+           class="absolute left-5 top-6 md:left-0 w-24 h-24 md:w-28 md:h-28 rounded-full object-cover object-top border-2 border-turquoise photo-pulse">
+
+      <div class="pt-24 md:pt-16">
+        <p class="text-turquoise font-medium">Étudiante en génie biomédical</p>
+        <h1 class="mt-3 font-titre text-4xl md:text-6xl font-bold leading-tight">HOUNTONDJI</h1>
+        <p class="mt-2 font-titre text-xl md:text-2xl text-glace/90">Teny Noura Tifenn Assouanmagni</p>
+        <p class="mt-6 mx-auto max-w-2xl text-lg text-glace/80 leading-relaxed">
+          Étudiante en 2<sup>e</sup> année de génie biomédical à l'Institut Ivoirien de Technologie, passionnée par l'innovation en santé et les techniques médicales pour améliorer la vie humaine.
+        </p>
+        <p class="mt-4 font-titre text-xl md:text-2xl text-vert">
+          « Concevoir aujourd'hui les technologies médicales de demain. »
+        </p>
+        <a href="#projets" class="inline-block mt-10 bg-turquoise text-nuit px-6 py-3 rounded-md font-semibold hover:bg-glace transition-colors">
+          Voir mes projets
+        </a>
+      </div>
+    </section>
+
+    <!-- Introduction : qui je suis, ce que je cherche -->
+    <section id="introduction" class="bg-petrole/50">
+      <div class="mx-auto max-w-5xl px-5 py-16">
+        <h2 class="font-titre text-3xl font-bold">Qui je suis</h2>
+        <p class="mt-4 max-w-2xl leading-relaxed text-glace/80">
+          Un ingénieur biomédical doit comprendre le corps humain, savoir coder et maîtriser la technologie. C'est cette polyvalence que je développe, entre mes études, mes projets et mon engagement bénévole auprès d'enfants malades.
+        </p>
+        <p class="mt-4 max-w-2xl leading-relaxed text-glace/80">
+          <strong class="font-semibold text-glace">Je recherche :</strong> des stages et des projets en innovation biomédicale.
+        </p>
+      </div>
+    </section>
+
+    <!-- Domaines : médecine, informatique, technologie -->
+    <section id="domaines" class="mx-auto max-w-5xl px-5 py-16">
+      <h2 class="font-titre text-3xl font-bold">Un profil à la croisée des disciplines</h2>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <article class="bg-petrole border border-turquoise/30 rounded-xl p-6">
+          <h3 class="font-titre text-xl font-semibold text-turquoise">Médecine</h3>
+          <p class="mt-3 text-sm leading-relaxed text-glace/80">Comprendre le fonctionnement du corps humain et les besoins concrets des patients et des soignants, notamment à l'hôpital.</p>
+        </article>
+        <article class="bg-petrole border border-bleu/40 rounded-xl p-6">
+          <h3 class="font-titre text-xl font-semibold text-bleu">Informatique</h3>
+          <p class="mt-3 text-sm leading-relaxed text-glace/80">Développer des applications et automatiser la collecte de données, du web scraping à la surveillance médicale.</p>
+        </article>
+        <article class="bg-petrole border border-vert/40 rounded-xl p-6">
+          <h3 class="font-titre text-xl font-semibold text-vert">Technologie</h3>
+          <p class="mt-3 text-sm leading-relaxed text-glace/80">Concevoir et comprendre les dispositifs médicaux, de leur fonctionnement à leur maintenance.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="bg-petrole/50">
+      <div class="mx-auto max-w-5xl px-5 py-16">
+        <h2 class="font-titre text-3xl font-bold">Projets</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <article class="bg-nuit border border-petrole rounded-xl p-6 flex flex-col hover:border-turquoise/60 transition-colors">
+            <h3 class="font-titre text-lg font-semibold">Vitaguardian</h3>
+            <p class="mt-3 text-sm leading-relaxed text-glace/80 flex-grow">Application de surveillance médicale avec un espace patient et un espace médecin. Le patient suit son rythme cardiaque, sa tension et son taux d'oxygène (SpO2), et peut appeler les urgences. Le médecin suit ses patients en temps réel.</p>
+            <p class="mt-4 text-xs text-glace/70"><span class="font-semibold">Technologies :</span> [à compléter]</p>
+            <a href="#" data-lien="github-vitaguardian" class="mt-4 text-sm font-medium text-turquoise hover:underline">Voir le code sur GitHub</a>
+          </article>
+
+          <article class="bg-nuit border border-petrole rounded-xl p-6 flex flex-col hover:border-turquoise/60 transition-colors">
+            <h3 class="font-titre text-lg font-semibold">Web scraping Amazon</h3>
+            <p class="mt-3 text-sm leading-relaxed text-glace/80 flex-grow">Extraction automatique d'articles Amazon à partir d'une recherche, puis enregistrement de leurs informations : nom, prix, avis et note.</p>
+            <p class="mt-4 text-xs text-glace/70"><span class="font-semibold">Technologies :</span> [à compléter]</p>
+            <a href="#" data-lien="github-scraping" class="mt-4 text-sm font-medium text-turquoise hover:underline">Voir le code sur GitHub</a>
+          </article>
+
+          <article class="bg-nuit border border-petrole rounded-xl p-6 flex flex-col hover:border-turquoise/60 transition-colors">
+            <h3 class="font-titre text-lg font-semibold">Ce portfolio</h3>
+            <p class="mt-3 text-sm leading-relaxed text-glace/80 flex-grow">Site personnel responsive, conçu en HTML, avec Tailwind pour le style et jQuery pour les interactions, publié sur GitHub Pages.</p>
+            <p class="mt-4 text-xs text-glace/70"><span class="font-semibold">Technologies :</span> HTML, Tailwind CSS, jQuery</p>
+            <a href="#" data-lien="github-portfolio" class="mt-4 text-sm font-medium text-turquoise hover:underline">Voir le code sur GitHub</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CV : formation, compétences, expériences, PDF -->
+    <section id="cv" class="mx-auto max-w-5xl px-5 py-16">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <h2 class="font-titre text-3xl font-bold">CV</h2>
+        <a href="cv.pdf" download class="self-start md:self-auto border border-turquoise text-turquoise px-5 py-2 rounded-md text-sm font-semibold hover:bg-turquoise hover:text-nuit transition-colors">
+          Télécharger le CV (PDF)
+        </a>
+      </div>
+
+      <div class="mt-8 grid gap-10 md:grid-cols-2">
+        <div>
+          <h3 class="font-titre font-semibold text-lg">Formation</h3>
+          <ul class="mt-3 space-y-3 text-sm leading-relaxed text-glace/80">
+            <li>Génie biomédical, 2<sup>e</sup> année — Institut Ivoirien de Technologie (IIT), Abidjan</li>
+          </ul>
+
+          <h3 class="font-titre font-semibold text-lg mt-8">Expériences</h3>
+          <ul class="mt-3 space-y-4 text-sm leading-relaxed text-glace/80">
+            <li>
+              <span class="font-semibold text-glace">Stage de 3 mois</span> — Hôpital Général de Marcory<br>
+              <span class="text-glace/60">[dates]</span>
+            </li>
+            <li>
+              <span class="font-semibold text-glace">Bénévole</span> — Association Aline, lutte contre le cancer pédiatrique<br>
+              <span class="text-glace/60">[dates]</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-titre font-semibold text-lg">Compétences</h3>
+          <ul class="mt-3 flex flex-wrap gap-2 text-sm">
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">HTML / CSS</li>
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">JavaScript / jQuery</li>
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">Tailwind CSS</li>
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">Python</li>
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">Git / GitHub</li>
+            <li class="bg-nuit border border-turquoise/40 px-3 py-1 rounded-full">Web scraping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-petrole/50">
+      <div class="mx-auto max-w-5xl px-5 py-16">
+        <h2 class="font-titre text-3xl font-bold">Contact</h2>
+        <p class="mt-3 text-glace/80">Un stage, une collaboration ou une question sur un projet ? Écrivez-moi.</p>
+
+        <form id="contact-form" class="mt-8 grid gap-4 max-w-xl" novalidate>
+          <div>
+            <label for="nom" class="block text-sm font-medium">Nom</label>
+            <input id="nom" name="nom" type="text" required autocomplete="name"
+                   class="mt-1 w-full bg-petrole border border-turquoise/30 rounded-md px-3 py-2 text-glace focus:border-turquoise">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">E-mail</label>
+            <input id="email" name="email" type="email" required autocomplete="email"
+                   class="mt-1 w-full bg-petrole border border-turquoise/30 rounded-md px-3 py-2 text-glace focus:border-turquoise">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium">Message</label>
+            <textarea id="message" name="message" rows="5" required
+                      class="mt-1 w-full bg-petrole border border-turquoise/30 rounded-md px-3 py-2 text-glace focus:border-turquoise"></textarea>
+          </div>
+          <button type="submit" class="justify-self-start bg-turquoise text-nuit px-6 py-3 rounded-md font-semibold hover:bg-glace transition-colors">
+            Envoyer
+          </button>
+          <p id="form-feedback" class="text-sm min-h-[1.25rem]" role="status" aria-live="polite"></p>
+        </form>
+
+        <ul class="mt-10 flex flex-wrap gap-6 text-sm font-medium">
+          <li><a href="mailto:hountondjitenynoura@gmail.com" class="hover:text-turquoise">hountondjitenynoura@gmail.com</a></li>
+          <li><a href="https://github.com/hountondjitenynoura" target="_blank" rel="noopener" class="hover:text-turquoise">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/teny-noura-tifenn-hountondji-83828a292" target="_blank" rel="noopener" class="hover:text-turquoise">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="border-t border-petrole">
+    <div class="mx-auto max-w-5xl px-5 py-6 flex flex-col sm:flex-row gap-3 justify-between text-sm text-glace/70">
+      <p>© <span id="year"></span> HOUNTONDJI Teny Noura Tifenn Assouanmagni</p>
+      <div class="flex gap-5">
+        <a href="https://github.com/hountondjitenynoura" target="_blank" rel="noopener" class="hover:text-turquoise">GitHub</a>
+        <a href="https://www.linkedin.com/in/teny-noura-tifenn-hountondji-83828a292" target="_blank" rel="noopener" class="hover:text-turquoise">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

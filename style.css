@@ -1,0 +1,60 @@
+/* ==========================================================
+   style.css — styles personnalisés du portfolio
+   Les couleurs et polices Tailwind sont définies dans index.html
+   ========================================================== */
+
+/* Défilement fluide vers les sections, avec une marge pour l'en-tête fixe */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Contour visible au clavier pour l'accessibilité */
+:focus-visible {
+  outline: 3px solid #2EC4B6;
+  outline-offset: 3px;
+}
+
+/* Désactiver les animations pour les personnes qui le souhaitent */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================================
+   Pulsation de la photo d'accueil (rythme cardiaque)
+   Un double battement : grossissement + halo turquoise qui s'estompe
+   ========================================================== */
+@keyframes battement {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.55);
+  }
+  14% {
+    transform: scale(1.06);
+  }
+  28% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(46, 196, 182, 0);
+  }
+  42% {
+    transform: scale(1.04);
+  }
+  70%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(46, 196, 182, 0);
+  }
+}
+
+.photo-pulse {
+  animation: battement 1.6s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-pulse {
+    animation: none;
+  }
+}
